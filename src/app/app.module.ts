@@ -11,6 +11,7 @@ import { CommonModule } from "@angular/common";
 import {HttpModule, Http} from '@angular/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { RecaptchaModule } from 'ng-recaptcha';
 
 const appRoutes: Routes = [
   {
@@ -52,7 +53,8 @@ export function createTranslateLoader(http: Http) {
         useFactory: (createTranslateLoader),
         deps: [Http]
       }
-    })
+    }),
+    RecaptchaModule.forRoot()
   ],
   exports: [
     CommonModule,

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core'
+import { Component } from '@angular/core';
+import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 
 @Component({
   selector: 'register',
@@ -6,4 +7,8 @@ import { Component } from '@angular/core'
   styleUrls: ['./register.css']
 })
 
-export class RegisterComponent {}
+export class RegisterComponent {
+  resolved(captchaResponse: string) {
+    console.log(`Resolved captcha with response ${captchaResponse}:`);
+  }
+}
