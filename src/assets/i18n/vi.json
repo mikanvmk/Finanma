@@ -4,11 +4,12 @@
       "home": "Trang chủ",
       "introduce": "Giới thiệu",
       "products": "Sản phẩm",
-      "signIn" : "Đăng nhập"
+      "signIn" : "Đăng nhập",
+      "youHasRegister": "Bạn chưa đăng ký ?"
     },
     "button": {
       "login": "Đăng nhập",
-      "signUp": "Đăng ký"
+      "register": "Đăng ký"
     }
   }
 }

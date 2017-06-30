@@ -5,6 +5,10 @@ html, body {
   overflow: hidden;
 }
 
+.content-header {
+  margin: 50px;
+}
+
 .container-form {
   height: 70%;
 }

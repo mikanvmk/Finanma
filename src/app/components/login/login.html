@@ -13,9 +13,12 @@
       <input type="text" class="form-control" placeholder="Text input"
              name="password"  [(ngModel)]="password"
              #_password="ngModel" required>
-      <re-captcha (resolved)="resolved($event)" siteKey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></re-captcha>
+
       <div class="row btn-submit">
         <button type="submit" class="btn btn-primary">{{ 'main.label.signIn' | translate }}</button>
+      </div>
+      <div class="row justify-content-center">
+        <a class="btn btn-default" routerLink="/register" role="button">{{ 'main.label.youHasRegister' | translate }} {{ 'main.button.register' | translate }}</a>
       </div>
     </form>
   </div>

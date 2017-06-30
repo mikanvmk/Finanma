@@ -4,11 +4,12 @@
       "home": "Home",
       "introduce": "Introduce",
       "products": "Products",
-      "signIn" : "Sign In"
+      "signIn" : "Sign In",
+      "youHasRegister": "You are not registered ?"
     },
     "button": {
       "login": "Login",
-      "signUp": "Sign Up"
+      "register": "Sign Up"
     }
   }
 }

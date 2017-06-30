@@ -10,6 +10,7 @@ import {TranslateService} from '@ngx-translate/core';
 export class HomeComponent {
 
   language : string;
+  nameLang = ['English','Viêt Nam'];
 
   constructor(private translate: TranslateService) {
     this.language = translate.currentLang;

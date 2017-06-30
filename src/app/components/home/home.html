@@ -9,12 +9,13 @@
   </div>
   <div class="row col-6 justify-content-center">
     <div class="col-2">
-      <select class="form-control"  id="language"
+      <select class="form-control language-css"  id="language"
               [(ngModel)]="language" name="language" (change)="selectLang(language)">
-        <option *ngFor="let language of translate.getLangs()" [value]="language" [selected]="language === translate.currentLang">{{language}}</option>
+        <option *ngFor="let language of translate.getLangs(); let i = index" [value]="language"
+                [selected]="language === translate.currentLang">{{nameLang[i]}}</option>
       </select>
     </div>
-    <div class="col-2"><a class="btn btn-default" routerLink="/login" role="button">{{ 'main.button.login' | translate }}</a></div>
-    <div class="col-1"><button type="button" class="btn btn-primary" routerLink="/register">{{ 'main.button.signUp' | translate }}</button></div>
+    <div class="col-2 text-right"><a class="btn btn-default" routerLink="/login" role="button">{{ 'main.button.login' | translate }}</a></div>
+    <div class="col-2"><button type="button" class="btn btn-primary" routerLink="/register">{{ 'main.button.register' | translate }}</button></div>
   </div>
 </div>

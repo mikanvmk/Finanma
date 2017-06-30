@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'app works!';
 
   constructor(translate:TranslateService) {
-    translate.addLangs(['vi']);
+    translate.addLangs(['en','vi']);
     let lang = localStorage.getItem('lang');
     if (!lang){
       translate.use('en');
