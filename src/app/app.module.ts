@@ -9,7 +9,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { DataService } from './data.service';
 import { CommonModule } from "@angular/common";
 import {HttpModule, Http} from '@angular/http';
-import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateModule, TranslateLoader,TranslateService} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { RecaptchaModule } from 'ng-recaptcha';
 
@@ -63,4 +63,9 @@ export function createTranslateLoader(http: Http) {
   providers: [ DataService ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(translate: TranslateService) {
+    translate.addLangs(['vi']);
+    translate.use('en')
+  }
+}
