@@ -10,6 +10,9 @@ export class AppComponent {
   title = 'app works!';
 
   constructor(translate: TranslateService) {
-    translate.addLangs(["English", "Vietnamese"]);
+    translate.addLangs(["en", "vi"]);
+
+    let browserLang = translate.getBrowserLang();
+    translate.use(browserLang.match(/en|vi/) ? browserLang : 'en');
   }
 }
