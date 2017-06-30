@@ -1,0 +1,13 @@
+{
+  "main": {
+    "label": {
+      "home": "Home",
+      "introduce": "Introduce",
+      "products": "Products"
+    },
+    "button": {
+      "login": "Login",
+      "signUp": "Sign Up"
+    }
+  }
+}

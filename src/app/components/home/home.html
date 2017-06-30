@@ -3,18 +3,18 @@
     <div>
       <img src="assets/images/icon/iconFinama.PNG" alt="">
     </div>
-    <div class="col-2">Home</div>
-    <div class="col-2">Introduce</div>
-    <div class="col-2">Products</div>
+    <div class="col-2">{{ 'main.label.home' | translate }}</div>
+    <div class="col-2">{{ 'main.label.introduce' | translate }}</div>
+    <div class="col-2">{{ 'main.label.products' | translate }}</div>
   </div>
   <div class="row col-6 justify-content-center">
-    <div class="col-1">
+    <div class="col-2">
       <select class="form-control"  id="language"
-              [(ngModel)]="language" name="language">
-        <option *ngFor="let language of languages" [value]="language">{{language}}</option>
+              [(ngModel)]="language" name="language" (change)="translate.use(language)">
+        <option *ngFor="let language of translate.getLangs()" [value]="language" [selected]="language === translate.currentLang">{{language}}</option>
       </select>
     </div>
-    <div class="col-1" style="margin-right: 20px"><a class="btn btn-default" routerLink="/login" role="button">Login</a></div>
-    <div class="col-1"><button type="button" class="btn btn-primary" routerLink="/register">Sign Up</button></div>
+    <div class="col-2"><a class="btn btn-default" routerLink="/login" role="button">{{ 'main.button.login' | translate }}</a></div>
+    <div class="col-1"><button type="button" class="btn btn-primary" routerLink="/register">{{ 'main.button.signUp' | translate }}</button></div>
   </div>
 </div>

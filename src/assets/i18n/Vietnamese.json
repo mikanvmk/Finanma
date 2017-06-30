@@ -1,0 +1,13 @@
+{
+  "main": {
+    "label": {
+      "home": "Trang chủ",
+      "introduce": "Giới thiệu",
+      "products": "Sản phẩm"
+    },
+    "button": {
+      "login": "Đăng nhập",
+      "signUp": "Đăng ký"
+    }
+  }
+}
