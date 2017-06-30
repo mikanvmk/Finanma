@@ -6,16 +6,18 @@
     <div class="col-4" style="background-color: #00b3ee">
       image
     </div>
-    <form class="col-8 form-input">
+    <form class="col-8 form-input" #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm.value)">
       <div class="row justify-content-center">{{ 'main.button.signUp' | translate }}</div>
       <div class="row">
         <div class="col-6">
-          <input type="text" class="form-control" placeholder="Text input">
-          <input type="text" class="form-control" placeholder="Text input">
-          <input type="text" class="form-control" placeholder="Text input">
-          <input type="text" class="form-control" placeholder="Text input">
-          <input type="text" class="form-control" placeholder="Text input">
-          <input type="text" class="form-control" placeholder="Text input">
+          <input type="text" class="form-control" placeholder="Text input"
+                 name="username"  [(ngModel)]="username"
+                 #user_name="ngModel" required>
+          <input type="text" class="form-control" placeholder="Text input" required>
+          <input type="text" class="form-control" placeholder="Text input" required>
+          <input type="text" class="form-control" placeholder="Text input" required>
+          <input type="text" class="form-control" placeholder="Text input" required>
+          <input type="text" class="form-control" placeholder="Text input" required>
           <re-captcha (resolved)="resolved($event)" siteKey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></re-captcha>
         </div>
         <div class="col-6">
@@ -26,6 +28,9 @@
           <input type="text" class="form-control" placeholder="Text input">
           <input type="text" class="form-control" placeholder="Text input">
         </div>
+      </div>
+      <div class="row btn-submit">
+        <button type="submit" class="btn btn-primary">{{ 'main.button.signUp' | translate }}</button>
       </div>
     </form>
   </div>

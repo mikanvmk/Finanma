@@ -18,6 +18,7 @@ export class HomeComponent {
   selectLang(language) {
     this.language = language;
     this.translate.currentLang = language;
-    this.translate.use(language)
+    this.translate.use(language);
+    localStorage.setItem('lang',language);
   }
 }

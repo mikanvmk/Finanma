@@ -11,4 +11,8 @@ export class RegisterComponent {
   resolved(captchaResponse: string) {
     console.log(`Resolved captcha with response ${captchaResponse}:`);
   }
+
+  onSubmit(data) {
+    console.log(data)
+  }
 }

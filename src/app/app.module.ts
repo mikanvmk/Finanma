@@ -63,9 +63,4 @@ export function createTranslateLoader(http: Http) {
   providers: [ DataService ],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-  constructor(translate: TranslateService) {
-    translate.addLangs(['vi']);
-    translate.use('en')
-  }
-}
+export class AppModule {}

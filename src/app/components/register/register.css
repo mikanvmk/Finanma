@@ -2,5 +2,10 @@
   margin: 50px;
 }
 
-
+.btn-submit button {
+  width: 100%;
+}
+.btn-submit {
+  padding: 10px 20px;
+}
 

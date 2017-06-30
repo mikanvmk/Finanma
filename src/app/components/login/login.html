@@ -1,1 +1,22 @@
-Login
+<div class="row justify-content-center content-header">
+  <img src="assets/images/icon/iconFinama.PNG" alt="">
+</div>
+<div class="row justify-content-center container-form">
+  <div class="row col-8 content-form">
+    <div class="col-4" style="background-color: #00b3ee">
+      image
+    </div>
+    <form class="col-8 form-input" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
+      <div class="row justify-content-center">{{ 'main.label.signIn' | translate }}</div>
+      <input type="text" class="form-control" placeholder="Text input" name="username"  [(ngModel)]="username"
+             #user_name="ngModel" required>
+      <input type="text" class="form-control" placeholder="Text input"
+             name="password"  [(ngModel)]="password"
+             #_password="ngModel" required>
+      <re-captcha (resolved)="resolved($event)" siteKey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></re-captcha>
+      <div class="row btn-submit">
+        <button type="submit" class="btn btn-primary">{{ 'main.label.signIn' | translate }}</button>
+      </div>
+    </form>
+  </div>
+</div>

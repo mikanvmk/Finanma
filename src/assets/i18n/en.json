@@ -3,7 +3,8 @@
     "label": {
       "home": "Home",
       "introduce": "Introduce",
-      "products": "Products"
+      "products": "Products",
+      "signIn" : "Sign In"
     },
     "button": {
       "login": "Login",

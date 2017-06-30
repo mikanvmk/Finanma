@@ -3,7 +3,8 @@
     "label": {
       "home": "Trang chủ",
       "introduce": "Giới thiệu",
-      "products": "Sản phẩm"
+      "products": "Sản phẩm",
+      "signIn" : "Đăng nhập"
     },
     "button": {
       "login": "Đăng nhập",
