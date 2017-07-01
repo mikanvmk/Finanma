@@ -1,5 +1,7 @@
+import {NgForm} from '@angular/forms';
 import { Component } from '@angular/core'
-
+import { Constant } from '../../constant/constant';
+import { HttpClient } from '../../constant/httpClient';
 @Component({
   selector: 'login',
   templateUrl: './login.html',
@@ -7,8 +9,12 @@ import { Component } from '@angular/core'
 })
 
 export class LoginComponent {
+  constructor(private http: HttpClient){
+
+  }
 
   onSubmit(data){
-    console.log(data)
+    let bodyString = JSON.stringify(data);
+    this.http.post(Constant.URL_API,bodyString)
   }
 }

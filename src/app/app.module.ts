@@ -12,6 +12,8 @@ import {HttpModule, Http} from '@angular/http';
 import {TranslateModule, TranslateLoader,TranslateService} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { RecaptchaModule } from 'ng-recaptcha';
+import {LoginService} from "./components/login/login.service";
+import {HttpClient} from "./constant/httpClient";
 
 const appRoutes: Routes = [
   {
@@ -23,11 +25,6 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent},
 ];
-
-// AoT requires an exported function for factories
-export function HttpLoaderFactory(http: Http) {
-  return new TranslateHttpLoader(http);
-}
 
 export function createTranslateLoader(http: Http) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -60,7 +57,7 @@ export function createTranslateLoader(http: Http) {
     CommonModule,
     TranslateModule
   ],
-  providers: [ DataService ],
+  providers: [ DataService, LoginService, HttpClient ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

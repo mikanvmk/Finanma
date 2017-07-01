@@ -6,7 +6,7 @@
     <div class="col-4" style="background-color: #00b3ee">
       image
     </div>
-    <form class="col-8 form-input" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
+    <form class="col-8 form-input" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)" ngNativeValidate>
       <div class="row justify-content-center">{{ 'main.label.signIn' | translate }}</div>
       <input type="text" class="form-control" placeholder="Text input" name="username"  [(ngModel)]="username"
              #user_name="ngModel" required>

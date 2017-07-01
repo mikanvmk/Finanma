@@ -22,4 +22,8 @@ export class HomeComponent {
     this.translate.use(language);
     localStorage.setItem('lang',language);
   }
+
+  register() {
+
+  }
 }
