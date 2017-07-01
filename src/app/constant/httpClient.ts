@@ -7,7 +7,7 @@ export class HttpClient {
   constructor(private http: Http) {}
 
   createAuthorizationHeader(headers: Headers) {
-    headers.append('Access-Control-Allow-Origin','http://localhost:4200/login');
+    headers.append('*','*');
   }
 
   get(url) {

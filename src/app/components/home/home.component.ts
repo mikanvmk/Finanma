@@ -12,7 +12,7 @@ export class HomeComponent {
   language : string;
   nameLang = ['English','Viêt Nam'];
 
-  constructor(private translate: TranslateService) {
+  constructor(public translate: TranslateService) {
     this.language = translate.currentLang;
   }
 

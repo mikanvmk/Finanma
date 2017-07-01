@@ -12,7 +12,6 @@ import {HttpModule, Http} from '@angular/http';
 import {TranslateModule, TranslateLoader,TranslateService} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { RecaptchaModule } from 'ng-recaptcha';
-import {LoginService} from "./components/login/login.service";
 import {HttpClient} from "./constant/httpClient";
 
 const appRoutes: Routes = [
@@ -21,9 +20,13 @@ const appRoutes: Routes = [
     redirectTo: "/home",
     pathMatch: 'full'
   },
-  { path: 'home', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent},
+  { path: '', component: AppComponent,
+    children : [
+      { path: 'home', component: HomeComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'register', component: RegisterComponent},
+    ]
+  },
 ];
 
 export function createTranslateLoader(http: Http) {
@@ -40,7 +43,8 @@ export function createTranslateLoader(http: Http) {
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes,{ useHash: true }),
+    RouterModule.forChild(appRoutes),
     FormsModule,
     CommonModule,
     HttpModule,
@@ -57,7 +61,7 @@ export function createTranslateLoader(http: Http) {
     CommonModule,
     TranslateModule
   ],
-  providers: [ DataService, LoginService, HttpClient ],
+  providers: [ DataService, HttpClient ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -8,11 +8,9 @@
     </div>
     <form class="col-8 form-input" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)" ngNativeValidate>
       <div class="row justify-content-center">{{ 'main.label.signIn' | translate }}</div>
-      <input type="text" class="form-control" placeholder="Text input" name="username"  [(ngModel)]="username"
-             #user_name="ngModel" required>
+      <input type="text" class="form-control" placeholder="Text input" name="username"  required>
       <input type="text" class="form-control" placeholder="Text input"
-             name="password"  [(ngModel)]="password"
-             #_password="ngModel" required>
+             name="password" required>
 
       <div class="row btn-submit">
         <button type="submit" class="btn btn-primary">{{ 'main.label.signIn' | translate }}</button>
